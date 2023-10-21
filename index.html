@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <title>Gesture Web App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Cutive+Mono&family=Dancing+Script&family=Lora&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+  <div class="container">
+  
+    <center>
+
+      <h1 class="text">Gesture Web App
+        <br>
+        <br>
+      </h1>
+
+      <br><br>
+
+      <p style="font-size: 22px;" class="text">Take a picture of a hand gesture to find its meaning
+      	<br>
+        <br>
+        <b class="text">The model is trained in the following hand gestures:</b>
+        <br>
+        <b class="text">✌️ | 👌 | 👍</b>
+        <br>
+        <br>
+        <br>
+      </p>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label class="text">Snapshot -> </label>
+        <br>
+        <div id="result"></div>
+        <br>
+        <br>
+        <button id="predict" onclick="predictGesture()" class="text button">Predict Gesture</button>
+      </div>
+      
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <label class="text">Prediction 1:</label>
+        <label id="gesture1" class="gestureName text"></label>
+        <label class="gesture text" id="predictionGesture1"></label>
+
+        <br>
+        <br>
+        <br>
+
+        <label class="text">Prediction 2:</label>
+        <label id="gesture2" class="gestureName text"></label>
+        <label class="gesture text" id="predictionGesture2"></label>
+      </div>
+      
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label class="text">Webcam View -> </label>
+        <br>
+        <div id="camera"></div>
+        <br>
+        <br>
+        <button id="snapshot" onclick="takeSnapshot()" class="text button">Take Snapshot</button>
+      </div>
+
+  </div>
+
+  
+</center>
+
+<script src="main.js"></script>
+
+  </body>
+</html>
+
+ 
